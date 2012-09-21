@@ -1,0 +1,45 @@
+========================
+Vagrant Python-dev Setup
+========================
+
+These are the instruction for creating a simple Python development environment using a virtual machine.  The virtual machine will reside within your pc.  
+Please note that the virtual machine  uses the Ubuntu operating system.  You will note that the system uses a command line interface rather than a GUI.  
+This interface is typical of Python development environments.  If you wish to add a GUI you can look into using the GNU Gnome  GUI.  Once you have completed the 
+installation you will be able to invoke Python from the command prompt by entering the word "python".
+
+I will continue to enhance this installation with additional pyhon development tools.
+  
+
+The instructions assume you are working in MS Windows on your PC.  If you are using a diffent os your instructions may vary
+
+Installing
+==========
+
+
+1. Install Vagrant: http://vagrantup.com
+
+2. Install Virtualbox: http://wwww.freewareupdate.com DO NOT INSTALL THE LATEST VERSION OF THE SOFTWARE.  Install version 4.1.22 
+(latest version os not compatible wih the Vagrant softwareas of the writing 20-Sep-2012).
+
+3. Install the Virtual machine (in vagrant parlance this is called the "box")::
+
+       $ vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+
+4. Clone the Github repository and run!::
+
+       $ git clone git://github.com/udacians/PythonDevEnvironment.git ossdev
+       $ cd ossdev
+       $ vagrant up
+
+Using
+=====
+
+1. Once its all setup, you can get the IP address and port of your VM via::
+
+    $ vagrant ssh
+2. Now invoke PuTTY to access your VM.  When PuTTY asks for the ip address and port use the information that you got from the prior
+step. PuTTY can be downloaded from http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+If at any point the VM needs to be restarted simply invoke 
+      $ vagrant up
+
